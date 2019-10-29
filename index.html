@@ -3,27 +3,40 @@
 
 <head>
     <title>About Me</title>
+    <!-- CSS tag needs to be in head because it should load first -->
+    <link rel="stylesheet" type="text/css" href="./style.css" />
 </head>
 <main>
 
     <body>
         <h1 style="color: cadetblue; background: olive;">
-            Class 1 Lab
+            Who is Shingo?
         </h1>
+        <script src="./app.js"></script>
 
-        <p style="color: red; background: pink;">
-            What is your name? </p>
-
-        <p style="color: green; background: gray;"> What is your favorite restaurant?</p>
-
-        <p style="color: purple; background: yellow;">What is your favorite food?</p>
-
-        <p style="color: blue; background: orange;">How many times have you eaten at that restaurant?</p>
+        <!-- 5 questions just html -->
+        <p>
+            Shingo Nakajima. Graduated college. Worked in retail, sold clothes online, crypto trading. Want to build
+            apps and launch them in the future. </p>
+        <p>
+            Shingo Nakajima. Graduated college. Worked in retail, sold clothes online, crypto trading. Want to build
+            apps and launch them in the future. </p>
+        <p>
+            Shingo Nakajima. Graduated college. Worked in retail, sold clothes online, crypto trading. Want to build
+            apps and launch them in the future. </p>
+        <p>
+            Shingo Nakajima. Graduated college. Worked in retail, sold clothes online, crypto trading. Want to build
+            apps and launch them in the future. </p>
+        <p>
+            Shingo Nakajima. Graduated college. Worked in retail, sold clothes online, crypto trading. Want to build
+            apps and launch them in the future. </p>
 
         <script>
+            // 5 questions needed
             var name = prompt('Hello there, what is your name?');
             var favRestaurant = prompt(name + 'what is the name of your favorite restaurant?');
             var favFood = prompt(name + 'what is your favorite food to order at' + favRestaurant + '?');
+            var occasion = prompt(name + 'how many times have you eaten' + favFood + '?' + 'at' + favRestaurant + '?');
             var occasion = prompt(name + 'how many times have you eaten' + favFood + '?' + 'at' + favRestaurant + '?');
 
             console.log('Your name is' + name);
