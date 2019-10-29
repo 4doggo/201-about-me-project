@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>About Me</title>
+</head>
+<main>
+
+    <body>
+        <h1 style="color: cadetblue; background: olive;">
+            Class 1 Lab
+        </h1>
+
+        <p style="color: red; background: pink;">
+            What is your name? </p>
+
+        <p style="color: green; background: gray;"> What is your favorite restaurant?</p>
+
+        <p style="color: purple; background: yellow;">What is your favorite food?</p>
+
+        <p style="color: blue; background: orange;">How many times have you eaten at that restaurant?</p>
+
+        <script>
+            var name = prompt('Hello there, what is your name?');
+            var favRestaurant = prompt(name + 'what is the name of your favorite restaurant?');
+            var favFood = prompt(name + 'what is your favorite food to order at' + favRestaurant + '?');
+            var occasion = prompt(name + 'how many times have you eaten' + favFood + '?' + 'at' + favRestaurant + '?');
+
+            console.log('Your name is' + name);
+            console.log(name + 'Your favorite restaurant is' + favRestaurant);
+            console.log(name + 'You like to eat' + favFood + 'at' + favRestaurant);
+            console.log(name + 'You have eaten' + favFood + 'at' + favRestaurant + occasion + 'times');
+        </script>
+    </body>
+</main>
+<footer>
+    copyright Shingo 2019
+</footer>
+
+</html>
