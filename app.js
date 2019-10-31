@@ -65,12 +65,6 @@ var name = prompt('What is your name?');
 
 var display = alert('Welcome ' + name + ' !!');
 
-lab 3 work below(6th question w numerics) *****************************************
-    is the fifty eight working because I declared the variable ?
-        So I dont need to do var = when using ||? Why isnt else statement working ?
-            why doesnt recognize the number when I type a number after i do the alphabets
-how come it doesnt let me answer more than 2 times ? 
-
 var spaceNeedle = 58;
 var guessCount = 3;
 var spaceNeedleAnswer = prompt('How old do you think the Space Needle is?');
