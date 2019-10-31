@@ -76,7 +76,6 @@ var guessCount = 3;
 var spaceNeedleAnswer = prompt('How old do you think the Space Needle is?');
 var spaceNeedleAnswerInteger = parseInt(spaceNeedleAnswer, 10);
 
-
 do {
     guessCount--;
 
@@ -101,8 +100,29 @@ do {
 while (guessCount > 0 && spaceNeedleAnswerInteger !== spaceNeedle)
 
 
-
-// spaceNeedle = Alert('The correct answer is 58yrs old')
-
-
 // 7th question below *********************************
+
+var favoriteFoods = ['spaghetti', 'ramen', 'grapes'];
+var guessCount = 4;
+var correctGuessFlag = false;
+var favoriteFoodAnswer = prompt('What do you think my favorite food is?');
+console.log('first response', favoriteFoodAnswer);
+
+do {
+    guessCount--;
+
+    for (var i = 0; i < favoriteFoods.length; i++) {
+        if (favoriteFoods[i] === favoriteFoodAnswer) {
+            alert('CORRECT!!!')
+            correctGuessFlag = true;
+            break;
+        }
+    }
+    if (correctGuessFlag === false) {
+        favoriteFoodAnswer = prompt('Wrong!!');
+    }
+} while (guessCount > 0 && correctGuessFlag === false);
+
+
+// 8thquestion ***************************
+
