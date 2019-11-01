@@ -1,6 +1,10 @@
 'use strict';
 var scoreCount;
 
+// asking for name *************************************
+var userName = prompt("What is your name?");
+var display = alert("Welcome " + userName + " !!");
+
 // var checker1 to assigned it false in order to let the while loop to 
 // start then the while loop starts and added checker1 assigned to true 
 // after its correct for it to break out of the loop and it breaks the loop 
@@ -33,7 +37,6 @@ function question1() {
     }
     // var pencil = alert('The answer is yes')
 }
-question1();
 
 function question2() {
     var einsteinQuestion = prompt('Albert Einstein failed every subject in school that wasnt math or physics').toLowerCase();
@@ -56,7 +59,6 @@ function question2() {
         // var einstein = alert('The answer is yes')
     }
 }
-question2();
 
 function question3() {
     var nascarQuestion = prompt('Do NASCAR engines burn 115-octane leaded gasoline?').toLowerCase();
@@ -80,7 +82,6 @@ function question3() {
         }
     }
 }
-question3();
 
 function question4() {
     var naturalQuestion = prompt('Is Sucralose natural?').toLowerCase();
@@ -103,7 +104,6 @@ function question4() {
         // var natural = alert('The answer is no')
     }
 }
-question4();
 
 function question5() {
     var checker5 = false;
@@ -127,67 +127,39 @@ function question5() {
         }
     }
 }
-question5();
-
-// shows score as NaN whyyyyyy??????
-var finalScoreUser = alert("You got " + scoreCount + " correct!");
-
-// asking for name *************************************
-
-var userName = prompt("What is your name?");
-
-// userName = prompt("What is your name?");
-
-
-// while (userName ===  )
-
-
-//                         var username = prompt('What is your name?');
-//                         username = toParseInt;
-//                         var nameLength = 2;
-
-//                         while (username < nameLength) {
-//                             // if (username > nameLength) {
-//                             alert("At least try putting some letters in");
-//                             username = prompt('What is your name?');
-//                             // }
-
-
-var display = alert("Welcome " + userName + " !!");
 
 // 6th question ***********************************************
-var spaceNeedle = 58;
-var guessCount = 3;
-var spaceNeedleAnswer = prompt('How old do you think the Space Needle is?');
-var spaceNeedleAnswerInteger = parseInt(spaceNeedleAnswer, 10);
+function question6() {
+    var spaceNeedle = 58;
+    var guessCount = 3;
+    // var spaceNeedleAnswerInteger = parseInt(spaceNeedleAnswer, 10);
 
-do {
-    guessCount--;
+    while (guessCount > 0) {
+        var spaceNeedleAnswer = prompt("How old do you think the Space Needle is?");
+        if (spaceNeedleAnswer === spaceNeedle) {
+            alert("Correct!");
+        }
+        else if (spaceNeedleAnswerInteger > spaceNeedle) {
+            guessCount--;
+            spaceNeedleAnswerInteger = prompt("try again too high");
 
-    if (spaceNeedleAnswerInteger === spaceNeedle) {
-        alert('CORRECT!!!')
-        break
+        }
+        else if (spaceNeedleAnswerInteger < spaceNeedle) {
+            guessCount--;
+            spaceNeedleAnswerInteger = prompt("try again too low");
+        }
+        else {
+            guessCount--;
+            prompt("please respond with a number");
+        }
     }
-    else if (spaceNeedleAnswerInteger > spaceNeedle) {
-        spaceNeedleAnswerInteger = prompt('try again too high')
-    }
-    else if (spaceNeedleAnswerInteger < spaceNeedle) {
-        spaceNeedleAnswerInteger = prompt('try again too low')
-    }
-    else {
-        prompt('please respond with a number')
-    }
-    if (guessCount === 0) {
-        alert('I am sorry you are out of guesses the correct answer is 58')
-
-    }
+    guessCount === 0;
+    alert('I am sorry you are out of guesses the correct answer is 58');
 }
-while (guessCount > 0 && spaceNeedleAnswerInteger !== spaceNeedle)
-
 
 // 7th question below *********************************
 
-function question() {
+function question7() {
     var correctAnswerArray = ['mangoes', 'blueberries', 'grapes', 'bananas'];
     var userInput;
     var guessCount = 4;
@@ -206,7 +178,17 @@ function question() {
     }
 
     alert("Nice try!!");
-
 }
-question();
+
+question1();
+question2();
+question3();
+question4();
+question5();
+question6();
+question7();
+
+// Score Count Result Requirement *************************************
+// shows score as NaN whyyyyyy??????
+var finalScoreUser = alert("You got " + scoreCount + " out of 5 correct!");
 
