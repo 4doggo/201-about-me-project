@@ -2,8 +2,10 @@
 var scoreCount;
 
 // asking for name *************************************
-var userName = prompt("What is your name?");
-var display = alert("Welcome " + userName + " !!");
+function questionName() {
+    var userName = prompt("What is your name?");
+    var display = alert("Welcome " + userName + " !!");
+}
 
 // var checker1 to assigned it false in order to let the while loop to 
 // start then the while loop starts and added checker1 assigned to true 
@@ -131,30 +133,31 @@ function question5() {
 // 6th question ***********************************************
 function question6() {
     var spaceNeedle = 58;
-    var guessCount = 3;
-    // var spaceNeedleAnswerInteger = parseInt(spaceNeedleAnswer, 10);
+    var guessCount = 4;
+    var spaceNeedleAnswer = parseInt;
 
-    while (guessCount > 0) {
+    while (spaceNeedle !== spaceNeedleAnswer && guessCount > 0) {
         var spaceNeedleAnswer = prompt("How old do you think the Space Needle is?");
         if (spaceNeedleAnswer === spaceNeedle) {
             alert("Correct!");
+            break;
         }
-        else if (spaceNeedleAnswerInteger > spaceNeedle) {
+        else if (spaceNeedleAnswer > spaceNeedle) {
             guessCount--;
-            spaceNeedleAnswerInteger = prompt("try again too high");
-
+            alert("try again too high");
         }
-        else if (spaceNeedleAnswerInteger < spaceNeedle) {
+        else if (spaceNeedleAnswer < spaceNeedle) {
             guessCount--;
-            spaceNeedleAnswerInteger = prompt("try again too low");
+            alert("try again too low");
         }
-        else {
-            guessCount--;
-            prompt("please respond with a number");
+        // else if (spaceNeedleAnswer !==  ) {
+        //     guessCount--;
+        //     alert("try again and put in a numberrr");
+        // }
+        if (guessCount === 0) {
+            alert("I am sorry you are out of guesses the correct answer is 58");
         }
     }
-    guessCount === 0;
-    alert('I am sorry you are out of guesses the correct answer is 58');
 }
 
 // 7th question below *********************************
@@ -180,6 +183,7 @@ function question7() {
     alert("Nice try!!");
 }
 
+questionName();
 question1();
 question2();
 question3();
