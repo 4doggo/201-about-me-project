@@ -1,5 +1,5 @@
 'use strict';
-var scoreCount;
+var scoreCount = 0;
 
 // asking for name *************************************
 function questionName() {
